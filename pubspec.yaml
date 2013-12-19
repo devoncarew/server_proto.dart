@@ -1,0 +1,9 @@
+name: server_proto
+version: 0.1.0
+homepage: https://github.com/devoncarew/server_proto.dart
+description: A prototype of an analysis server
+dependencies:
+  analyzer: any
+  args: any
+dev_dependencies:
+  unittest: any
