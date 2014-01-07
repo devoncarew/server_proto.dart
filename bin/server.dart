@@ -13,7 +13,7 @@ void main(List args) {
 
 void _handleServer(HttpServer server) {
   server.listen((HttpRequest request) {
-    if (request.headers[HttpHeaders.UPGRADE] == 'websocket') {
+    if (request.headers[HttpHeaders.UPGRADE].indexOf('websocket') >= 0) {
       WebSocketTransformer.upgrade(request).then((WebSocket websocket) {
         _handleWebSocket(websocket);
       });
